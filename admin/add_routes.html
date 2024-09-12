@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Add Route...</h1>
+    <hr>
+    <form action="add_routes.php" method="post">
+        <table>
+            <tr>
+                <td>Route Name</td>
+                <td>:</td>
+                <td><input type="text" name="r_name" id="" pattern="\w{1,20}" required></td>
+                <td></td>
+                <td>Route ID</td>
+                <td>:</td>
+                <td><input type="text" name="r_id" id="" placeholder="4digit number" pattern="\d{4}" required></td>
+            </tr>
+            <tr>
+                <td>Start Point</td>
+                <td>:</td>
+                <td><input type="text" name="start_point" id="" pattern="[a-z,A-Z]{1,20}" required></td>
+                <td></td>
+                <td>End Point</td>
+                <td>:</td>
+                <td><input type="text" name="end_point" id="" pattern="[a-z,A-Z]{1,20}" required></td>
+            </tr>
+            <tr>
+                <td>Add Stoppage</td>
+                <td>:</td>
+                <td colspan="6">
+                    <fieldset class="inputs-set" id="list" class="input-field" name="Stoppage[]">
+                        <div class="input__w">
+                          <input class="input-field" type="text" name="Stoppage[]" pattern="[a-z,A-Z]{1,20}" required />
+                          <button class="btn-add-input" onclick="addField()" type="button">
+                            +
+                          </button>
+                        </div>
+                      </fieldset>
+                </td>
+            </tr>
+        </table><br>
+        <div class="btn">
+            <input class="add1" type="submit" value="Add" name="Add" style="width: 15%;height: 40px; font-size: 20px;padding: 10px;">
+            <input class="update" type="submit" value="Update" style="width: 15%;height: 40px; font-size: 20px;padding: 10px;">
+        </div>
+    </form>
+</body>
+<script>
+    const myForm = document.getElementById("list");
+
+function addField() {
+  // Create elements
+  const nef_wrapper = document.createElement("div");
+  const nef = document.createElement("input");
+  const btnAdd = document.createElement("button");
+  const btnDel = document.createElement("button");
+
+  // Add Class to main wrapper
+  nef_wrapper.classList.add("input__w");
+
+  // set button ADD
+  btnAdd.type = "button";
+  btnAdd.classList.add("btn-add-input");
+  btnAdd.innerText = "+";
+  btnAdd.setAttribute("onclick", "addField()");
+
+  // set button DEL
+  btnDel.type = "button";
+  btnDel.classList.add("btn-del-input");
+  btnDel.innerText = "-";
+
+  // set Input field
+  nef.type = "text";
+  nef.name = "Stoppage[]";
+//   nef.setAttribute("required", "");
+  nef.classList.add("Stoppage[]");
+
+  //append elements to main wrapper
+  nef_wrapper.appendChild(nef);
+  nef_wrapper.appendChild(btnAdd);
+  nef_wrapper.appendChild(btnDel);
+
+  // append element to DOM
+  myForm.appendChild(nef_wrapper);
+  btnDel.addEventListener("click", removeFeild);
+}
+
+//remove element from DOM
+function removeFeild(el) {
+  const field = el.target.parentElement;
+  field.remove();
+}
+</script>
+</html>

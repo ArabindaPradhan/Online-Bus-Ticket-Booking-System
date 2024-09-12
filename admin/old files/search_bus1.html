@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0px;
+            background-repeat: no-repeat;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: rgba(137, 165, 249, 0.557);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            font-family: monospace;
+        }
+
+        header:hover {
+            background-color: rgba(38, 38, 108, 0.64);
+            color: white;
+        }
+
+        .logo-title {
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            font-size: 22px;
+            align-items: center;
+            margin-left: -1070px;
+        }
+
+        .logo-title span {
+            color: red;
+        }
+
+        .logout-btn span {
+            padding: 12px 40px;
+            border-radius: 10px;
+            background-color: rgb(247, 64, 64);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .logout-btn span:hover {
+            background-color: rgb(236, 91, 91);
+            color: wheat;
+        }
+
+        main {
+            height: 75vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav {
+            background-color: rgba(137, 165, 249, 0.557);
+            height: 100%;
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+        .nav h1{
+            line-height: 60px;
+        }
+
+        
+        .dropdown-btn {
+            width: 80%;
+            padding: 10px;
+            border-radius: 7px;
+            font-size: 20px;
+            margin: 10px;
+            border: none;
+        }
+
+        .sidenav a,
+        .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            display: block;
+            width: 80%;
+            text-align: left;
+            cursor: pointer;
+        }
+        .sidenav a{
+            background-color: #e7e7e7;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .sidenav a:hover {
+            color: #000000;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .active {
+            background-color: green;
+            color: white;
+        }
+
+        .dropdown-container {
+            display: none;
+            width: 90%;
+            margin-left: 10px;
+            border-radius: 10px;
+        }
+
+        .bi-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+
+
+        .container {
+            background-color: rgb(208, 208, 208);
+            height: 100%;
+            width: 75%;
+            float: right;
+        }
+        
+        .content {
+            margin: 10px;
+            background-color: #fff;
+            height: 91%;
+            padding: 15px;
+        }
+        .profile{
+            height: 20%;
+        }
+        form{
+            line-height: 50px;
+            padding-left: 90px;
+            font-size: 17px;
+        }
+        input{
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 17px;
+            border: 1px solid gray;
+        }
+        input:hover{
+            background-color: rgb(233, 233, 233);
+        }
+        input{
+            margin-left: 50px;
+        }
+        select{
+            width: 20%;
+            height: 35px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-right: 10px;
+            font-size: 17px;
+            border: none;
+            border-bottom: 1px solid gray;
+        }
+        select:hover{
+            background-color: rgb(233, 233, 233);
+
+        }
+        .btn{
+            text-align: center;
+            padding-right:140px ;
+            margin-top: 10px;
+        }
+        .btn input:hover{
+            background-color: rgb(108, 196, 108);
+        }
+        footer {
+            color: #fff;
+            padding: 0px 30px 0px 30px;
+            height: 50vh;
+            background-color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        footer .row1 {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer .row2 {
+            line-height: 30px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        h3 {
+            padding-left: 40px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        footer .row3 {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer .title {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        footer .title span {
+            color: red;
+        }
+
+        .row1 .icon span {
+            padding-right: 20px;
+            font-size: 20px;
+        }
+
+        .row2 .btn {
+            height: 30px;
+            width: 170px;
+            border-radius: 5px;
+        }
+
+        .row2 .inp {
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        .row2 .btn:hover {
+            background: rgba(255, 0, 0, 0.582);
+        }
+
+        .feed {
+            margin-right: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-img">
+            <img class="image" src="/images/pngwing.com.png" alt="logo" height="30px">
+        </div>
+        <div class="logo-title">
+            <a href="admin_profile.html">Bus <span>Ticket</span> Booking...</a>
+        </div>
+
+        <div class="logout-btn"><a href="login.html"><span>Logout</span></a></div>
+
+    </header>
+    <section>
+        <main>
+            <div class="nav">
+                <h1 style="background-color: rgb(62, 62, 253); color: #fff;">Menu</h1>
+                <hr>
+
+                <div class="sidenav">
+
+                    <button class="dropdown-btn">Manage Bus
+                        <i class="bi bi-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                        <a href="add_bus.html">Add Bus</a>
+                        <a href="search_bus.html">Search Bus</a>
+                    </div>
+                    <button class="dropdown-btn">Manage Ticket
+                        <i class="bi bi-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                        <a href="#">Add Ticket</a>
+                        <a href="#">Edit Ticket</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="content">
+                    <h1>Search Bus....</h1>
+                    <hr>
+                    <div class="add">
+                        <form action="">
+                            <br>
+                            Search By... 
+                            <select name="" id="">
+                                <option value="">Bus Name</option>
+                                <option value="">Bus Regd Number</option>
+                                <option value="">Departure Place</option>
+                                <option value="">Arrival Place</option>
+                            </select> :
+                            <input type="text">
+                        </div> 
+                        <div class="btn">
+                        <input type="submit" name="" id="" value="Search" style="width: 15%;height: 40px; font-size: 20px;">   
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer>
+        <div class="row1">
+            <div class="title">Bus <span>Ticket</span> Booking...</div>
+            <div class="icon">
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-twitter-x"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-youtube"></span>
+            </div>
+        </div>
+        <hr>
+        <div class="row2">
+            <div>
+                <h3>Quick links</h3>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Feedback</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Get Help</h3>
+                <ul>
+                    <li>Faq</li>
+                    <li>Orders</li>
+                    <li>Retuens</li>
+                    <li>Payment Options</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Team 1</li>
+                    <li>MCA Sec-B</li>
+                    <li>Mob : +91 9861513686</li>
+                    <li>Srusti Academy of Management (Autonomous)</li>
+                </ul>
+            </div>
+            <div class="feed">
+                <h3>Feedback</h3>
+                <ul>
+                    <li><input class="inp" type="text" placeholder="Enter Here"></li>
+                    <li><input class="btn" type="button" value="Send"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row3">
+            <div>Copyright © 2024 SAM Team No. - 1 All rights reserved</div>
+            <div>Privacy policy Terms & condition</div>
+            <div>Arabinda Pradhan, Bikash Nayak</div>
+        </div>
+
+    </footer>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

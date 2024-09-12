@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        
+        main {
+            height: 60vh;
+            width: 100%;
+            background-image: url("images/contact-us-4193401_1280.jpg");
+            background-size: 100%;
+        }
+
+        .container1{
+            background-color: rgb(239, 239, 239);
+            height: 70vh;
+            
+        }
+        .details{
+            margin-top: 30px;
+            margin-left: 30px;
+            background-color: #fff;
+            box-shadow: 1px 1px 10px 2px black;
+            height: 85%;
+            width:46.2%;
+            float: left;
+            padding: 10px;
+            text-align: center;
+        }
+        .details h1{
+            padding: 10px;
+            color: rgba(255, 123, 0, 0.988);
+
+        }
+        .feedback h1{
+            padding: 10px;
+            text-align: center;
+            color: rgba(255, 123, 0, 0.988);
+        }
+        .feedback{
+            margin-top: 30px;
+            margin-right: 30px;
+            height: 85%;
+            width:46.2%;
+            float: right;
+            background-color: #fff;
+            box-shadow: 1px 1px 10px 2px black;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .feedback .f-form form{
+            padding: 20px;
+            font-size: 20px;
+        }
+        .inp input{
+            width: 97%;
+            border: 1px solid rgb(169, 169, 169);
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .btn input{
+            width: 30%;
+            border: 1px solid rgb(169, 169, 169);
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 15px;
+        }
+        .btn input:hover{
+            background-color: rgba(15, 203, 15, 0.488);
+        }
+        .btn{
+            text-align: center;
+        }
+        textarea{
+            width: 97%;
+            height: 80px;
+            border: 1px solid rgb(169, 169, 169);
+            border-radius: 5px;
+            padding: 5px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-img">
+            <img class="image" src="./images/pngwing.com.png" alt="logo" height="30px">
+        </div>
+        <div class="logo-title">
+            Bus <span>Ticket</span> Booking...
+        </div>
+        <div class="navs">
+            <nav>
+                <a href="index2.html"><span>Home</span></a>
+                <a href="about-Us.html"><span>About Us</span></a>
+                <a href="Contact-Us.html"><span>Contact Us</span></a>
+                <a href="Bookticket.html"><span>Book-Ticket</span></a>
+            </nav>
+        </div>
+        <div class="login-btn"><a href="login.html"><span>Login/Register</span></a></div>
+        <div class="icons">
+            <span class="bi bi-translate"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-person"></span>
+        </div>
+    </header>
+    <section>
+        <main>
+
+        </main>
+        <div class="container1">
+            <div class="details">
+                <h1>Contact Us</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.905187959519!2d85.81007615867613!3d20.345535121478612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1908e1e48a6f0f%3A0xd5d1d26ade19d88f!2sSrusti%20Academy%20of%20Management!5e0!3m2!1sen!2sin!4v1722324971449!5m2!1sen!2sin" width="500" height="350" style="border: 2px solid green;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- <br><div>e-mail: arabindapradhan2002@gmail.com</div>
+                <br><div>Mob: +91-9861513686</div> -->
+            </div>
+            <div class="feedback">
+                <h1>Fill this form to contact us</h1>
+                <form action="contat.php" method="post">
+                    <div class="inp">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" pattern="[a-z,A-Z]{1,30}" > <br><br>
+                        <label for="email">email:</label><br>
+                        <input type="email" name="email" id="email" pattern="\w{1,20}@[a-z]{5,10}\.com" required><br><br>
+                        <label for="num">Mobile-number:</label><br>
+                        <input type="number" id="num" name="mob" pattern="\+91\d{10}"><br><br>
+                        <label for="ta">Feedback Here:</label><br>
+                        <textarea name="feed" id=""></textarea> <br> <br>
+                        
+                    </div>
+                    <div class="btn">
+                        <input type="submit" name="submit" value="Submit">
+                        <input type="reset" value="Cancel">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row1">
+            <div class="title">Bus <span>Ticket</span> Booking...</div>
+            <div class="icon">
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-twitter-x"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-youtube"></span>
+            </div>
+        </div>
+        <hr>
+        <div class="row2">
+            <div>
+                <h3>Quick links</h3>
+                <h3><hr width="120%"></h3>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Feedback</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Get Help</h3>
+                <h3><hr width="80%"></h3>
+                <ul >
+                    <li>Faq</li>
+                    <li>Orders</li>
+                    <li>Retuens</li>
+                    <li>Payment Options</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <h3><hr width="40%"></h3>
+                <ul>
+                    <li>Team 1</li>
+                    <li>MCA Sec-B</li>
+                    <li>Mob : +91 9861513686</li>
+                    <li>Srusti Academy of Management (Autonomous)</li>
+                </ul>
+            </div>
+            <div class="feed">
+                <h3>Feedback</h3>
+                <ul>
+                    <li><input class="inp" type="text" placeholder="Enter Here"></li>
+                    <li><input class="btn" type="button" value="Send"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row3">
+            <div>Copyright © 2024 SAM Team No. - 1 All rights reserved</div>
+            <div>Privacy policy Terms & condition</div>
+            <div>Arabinda Pradhan, Bikash Nayak</div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

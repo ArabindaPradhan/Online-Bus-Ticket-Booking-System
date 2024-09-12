@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Add Bus...</h1>
+    <hr>
+    <form action="add_bus.php" method="post">
+        <table>
+            <tr>
+                <td>Bus Name</td>
+                <td>:</td>
+                <td><input type="text" name="b_name" id="" pattern="\w{1,20}" required></td>
+                <td></td>
+                <td>Bus ID</td>
+                <td>:</td>
+                <td colspan="2"><input type="text" name="regd" id="" placeholder="Regd number(ex:OR05 0007)" pattern="O[R,D]\d{2}\s\d{4}" required></td>
+            </tr>
+            <tr>
+                <td>Route ID</td>
+                <td>:</td>
+                <td><input type="text" name="route" id="" placeholder="4digit number" pattern="\d{4}" required></td>
+                <td></td>
+                <td>Bus Type</td>
+                <td>:</td>
+                <td>
+                    <select name="bus_type[]" id="">
+                        <option value="A/C">A/C</option>
+                        <option value="Non A/C">Non A/C</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="bus_type[]" id="">
+                        <option value="Sleeper">Sleeper</option>
+                        <option value="Seater">Seater</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Departure Time</td>
+                <td>:</td>
+                <td><input type="time" name="d_time" id=""></td>
+                <td></td>
+                <td>Arrival Time</td>
+                <td>:</td>
+                <td colspan="2"><input type="time" name="a_time" id=""></td>
+            </tr>
+            <tr>
+                <td>Facilities</td>
+                <td>:</td>
+                <td colspan="6"><input type="checkbox" name="Facilities[]" id="" style="width: 3%;margin-left: 7%;" value="WIFI">WIFI<input
+                        type="checkbox" name="Facilities[]" id="" style="width: 3%;margin-left: 7%;" value="Water Bottle">Water Bottle<input
+                        type="checkbox" name="Facilities[]" id="" style="width: 3%;margin-left: 7%;" value="Blanket">Blanket<input type="checkbox"
+                        name="Facilities[]" id="" style="width: 3%;margin-left: 7%;margin-top: 2%;" value="Charging Point">Charging Point</td>
+            </tr>
+        </table>
+        <div class="btn">
+            <input class="add1" type="submit" value="Add" name="Add" style="width: 15%;height: 40px; font-size: 20px;padding: 10px;">
+            <input class="update" type="submit" value="Update" style="width: 15%;height: 40px; font-size: 20px;padding: 10px;">
+        </div>
+    </form>
+</body>
+
+</html>

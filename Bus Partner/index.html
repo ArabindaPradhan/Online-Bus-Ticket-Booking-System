@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        header{
+            background-color: rgb(35, 35, 35);
+            color: white;
+            padding: 7px;
+        }
+        section{
+            margin-top: 1%;
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+        nav{
+            background-color: rgb(35, 35, 35);
+            color: #000000;
+            height: 100%;
+        }
+        nav ul{
+            list-style: none;
+        }
+        nav li{
+            padding: 5%;
+            background-color: #fff;
+            width: 70%;
+            margin-top: 10%;
+            border-radius: 10px;
+            font-family: Arial;
+        }
+        li a{
+            color: #000000;
+        }
+        nav li:hover{
+            background-color: gray;
+            color: white;
+        }
+        li a:hover{
+            color: #fff;
+        }
+        main{
+            margin: 1%;
+            background-color: #e6e6e6;
+            height: 500px;
+            overflow: auto;
+            padding: 2%;
+        }
+        main li{
+            margin: 1%;
+        }
+        
+        footer{
+            margin-top: 1%;
+            background-color: rgb(35, 35, 35);
+            color: white;
+            padding: 2%;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center">CityFlow...</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <a href="#Home"><li>Home</li></a>
+                <a href="#Verify"><li>Verify a Ticket</li></a>
+                <a href="#ConfirmedT"><li>Confirmed Tickets</li></a>
+                <a href="#CT"><li>Cancelled Tickets</li></a>
+            </ul>
+        </nav>
+        <main>
+            <div id="Home">
+                <div  align="center">
+                    <br>
+                <span class="bi bi-person-circle" style="font-size: 50px;"> Hii Name</span>
+                <br><hr>
+                <h1>Wellcome to CityFlow....</h1><hr>
+                </div>
+                <div>
+                    <h1>Roles and Responsibilities :-</h1>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                </div>
+            </div>
+            
+            <div id="Verify"><br>
+                <iframe src="./QR/qr.html" frameborder="0" name="frameBody" width="100%" height="550px"></iframe><br>
+            </div>
+            <div id="ConfirmedT"><br>
+                <iframe src="../Admin/view_bookings.html" frameborder="0" name="frameBody" width="100%" height="550px"></iframe><br>
+            </div>
+            <div id="CT"><br>
+                <iframe src="../Admin/view_cancellation.html" frameborder="0" name="frameBody" width="100%" height="550px"></iframe><br>
+            </div>
+        </main>
+    </section>
+    <footer>
+        CityFlow...
+        <hr>
+        For any type of issues, Contact : +91-9861513686 <span class="bi bi-phone"> </span><span class="bi bi-whatsapp"></span> <br> or <br> email : cityflow@gmail.com
+    </footer>
+</body>
+</html>

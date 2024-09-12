@@ -1,0 +1,31 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="details">
+            <div class="l-form">
+                <div class="l-l-form">
+                    <h1><span class="bi bi-person-circle"></span></h1>
+                    <form action="">
+                        Login as : 
+                        <label for="user"><input type="radio" name="login" id="user" style="width: 7%;" checked> User </label>
+                        <label for="admin"><input type="radio" name="login" id="admin" style="width: 7%;"> Admin </label>
+                        <label for="bus"><input type="radio" name="login" id="bus" style="width: 7%;"> Bus Partner </label>
+                        <br><br>
+                        <input type="text" name="" id="" placeholder="User Name" pattern=""><br><br>
+                        <input type="password" name="" id="" placeholder="Password" pattern="\w{1,5}?[\W]+\w{4,8}" required><br>
+                        </div>
+                        
+                        <div class="btn">
+                            <a href="admin_profile.html"><input type="submit" value="Login"></a><br>
+                        </div>
+                        <br>Forgot User Name or Password? <a href="forgot.html" target="l_frame">Click Here.</a><br>
+                        Are you a new user? <a href="reg.html" target="l_frame">Register...</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
